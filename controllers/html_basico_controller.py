@@ -9,6 +9,8 @@ class HTMLBasicoController(Basecontroller):
             ("/PI", "PI", self.pagina_PI),
             ("/Sobre", "Sobre", self.pagina_Sobre),
             ("/Curso", "Curso", self.pagina_Curso),
+            ("/login", "login", self.pagina_login),
+            ("/cadastro", "cadastro", self.pagina_cadastro)
         ]
         super().__init__(app)
         
@@ -23,7 +25,13 @@ class HTMLBasicoController(Basecontroller):
         return render_template("Sobre.html")
        
     def pagina_Curso(self):
-        return render_template("Curso.html")    
+        return render_template("Curso.html")  
+     
+    def pagina_login(self):
+        return render_template("login.html") 
+    
+    def pagina_cadastro(self):
+        return render_template("cadastro.html")
     
     
     

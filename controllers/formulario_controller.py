@@ -10,7 +10,8 @@ class Formulario_controller(Basecontroller):
             ("/cadastro", "cadastro", self.pagina_cadastro)
         ]
     
-    
+        super().__init__(app)
+        
     def pagina_login(self):
         return render_template("login.html") 
     

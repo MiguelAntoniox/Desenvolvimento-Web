@@ -6,17 +6,21 @@ class HTMLBasicoController(Basecontroller):
     def __init__(self, app):
         self.rotas = [
            ("/", "home", self.pagina_login),
-            ("/index", "main", self.pagina_inicial),
-            ("/PI", "PI", self.pagina_PI),
-            ("/Sobre", "Sobre", self.pagina_Sobre),
-            ("/Curso", "Curso", self.pagina_Curso),
-            #("/cadastro", "cadastro", self.pagina_cadastro)
+           ("/cadastro", "cadastro", self.pagina_cadastro)
+           ("/index", "main", self.pagina_inicial),
+           ("/PI", "PI", self.pagina_PI),
+           ("/Sobre", "Sobre", self.pagina_Sobre),
+           ("/Curso", "Curso", self.pagina_Curso),
+            
         ]
         super().__init__(app)
         
     
     def pagina_login(self):
-        return render_template("login.html") 
+        return render_template("login.html")
+     
+    def pagina_cadastro(self):
+        return render_template("cadastro.html")
         
     def pagina_inicial(self):
         return render_template("index.html")   
@@ -30,8 +34,7 @@ class HTMLBasicoController(Basecontroller):
     def pagina_Curso(self):
         return render_template("Curso.html")  
       
-    def pagina_cadastro(self):
-        return render_template("cadastro.html")
+    
     
     
     

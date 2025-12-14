@@ -5,8 +5,8 @@ class HTMLBasicoController(Basecontroller):
     
     def __init__(self, app):
         self.rotas = [
-           ("/", "home", self.pagina_login),
-           ("/cadastro", "cadastro", self.pagina_cadastro)
+           ("/", "home", self.pagina_login), # controle de rotas para as paginas
+           ("/cadastro", "novocadastro", self.pagina_cadastro), # nome da rota nao pode ser igual ao controller do formulario
            ("/index", "main", self.pagina_inicial),
            ("/PI", "PI", self.pagina_PI),
            ("/Sobre", "Sobre", self.pagina_Sobre),

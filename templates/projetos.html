@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device=width, initial_scale=1.0">
-    <title> PI </title>
+    <title> Projetos </title>
     
 </head>
 
 
 <body>
-    <h1> Meu pi </h1>
-    <h2> Olá! Bem-vindo ao meu PI. Aqui você encontrará informações sobre meu PI. </h2>
-    <p> Meu Pi consiste em um programa que automatiza ordens de compra e venda de ativos no mercado financeiro , minha ideia é ele ser destinado para web e mobile no futuro </p>
+    <h1> Projetos </h1>
+    <h2> Olá! Bem-vindo . Aqui você encontrará informações sobre meus projetos de programação. </h2>
 
-    <img src= "{{ url_for('static', filename='imagens/pi.gif') }} " alt="Imagem do meu PI" width="500" height="300">
+    <h3> Projetos Desktop</h3>
+
+    <h4> Gestor de Investimentos </h4>
+
+    <p> É um sistema que deve acompanhar o preço de ativos do mercado financeiro e enviar ordens previamente agendadas </p>
+    <img src= "{{ url_for('static', filename='imagens/IMGstoplo.png') }} " alt="Imagem do gestor de investimentos" width="500" height="300">
+
+
+    <h4> Sistema de gerenciamento de usuarios </h4>
+    
+    <p> É um sistema que gerencia usuarios cadastrados no banco de dados </p>
+    <img src= "{{ url_for('static', filename='imagens/IMGstoplo.png') }} " alt="Imagem do gestor de usuarios" width="500" height="300">
+
+
     
         <button> <a href= "/" > Voltar </button>
            
-    <button>  <a href= " https://github.com/MiguelAntoniox" target="_blank" > Mais projetos </button>
+    <footer> <button>  <a href= " https://github.com/MiguelAntoniox" target="_blank" > Mais projetos </button></footer>
 </body>
 </html>    

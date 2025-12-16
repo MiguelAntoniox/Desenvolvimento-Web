@@ -7,7 +7,7 @@ class HTMLBasicoController(Basecontroller):
         self.rotas = [
            ("/", "home", self.pagina_login), # controle de rotas para as paginas
            ("/cadastro", "novocadastro", self.pagina_cadastro),
-           ("/index", "main", self.pagina_inicial, ['POST'] ),    # tem que ter o post pq estou usando formulario la no login.html
+           ("/index", "index", self.pagina_inicial, ['POST'] ),    # tem que ter o post pq estou usando formulario la no login.html
            ("/projetos", "projetos", self.pagina_projetos),# nome da rota nao pode ser igual ao controller do formulari   
            ("/Sobre", "Sobre", self.pagina_Sobre),
            ("/Curso", "Curso", self.pagina_Curso),

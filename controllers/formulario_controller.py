@@ -6,14 +6,33 @@ class Formulario_controller(Basecontroller):
     
     def __init__(self, app):
         self.rotas = [
-            ("/login", "login", self.pagina_login),
-            ("/cadastro", "cadastro", self.pagina_cadastro)
+            ("/login", "login", self.pagina_login, ['POST']),
+            ("/cadastro", "cadastro", self.pagina_cadastro, ['POST']),
         ]
     
         super().__init__(app)
         
     def pagina_login(self):
-        return render_template("login.html") 
+       
+    
+        email = request.form.get("email")
+        senha = request.form.get("senha")
+        
+        if not email or not senha:
+            return "prencha todos os dados"
+        
+        return render_template("index.html") 
     
     def pagina_cadastro(self):
-        return render_template("cadastro.html")
+        
+        email = request.form.get("email")
+        senha = request.form.get("senha")
+        
+        if not email or not senha:
+            return "prencha todos os dados"
+
+        
+        return render_template("login.html") 
+        
+        
+       

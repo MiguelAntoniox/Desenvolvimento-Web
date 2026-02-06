@@ -15,9 +15,10 @@ class LoginController(BaseController):
         self.senha_correta = "12345"     
 
     def login(self):
-        if session.get("usuario_logado"):
-            return redirect(url_for("home"))  
-        return render_template("login.html")
+        if session.get("usuario_logado"): # verifica se o usuario esta em uma sessao
+            return redirect(url_for("home"))  # entra na home se sim
+        return render_template("login.html") # volta pro login
+        2
 
     def entrar(self):
         usuario = request.form.get("usuario")

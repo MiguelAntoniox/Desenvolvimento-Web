@@ -1,0 +1,1 @@
+from flask import session, redirect, url_for # session vai armazenar informaçoes especificas do usuario ---  redirection serve para levar para outra pagina --- 

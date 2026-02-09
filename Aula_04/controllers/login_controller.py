@@ -18,7 +18,7 @@ class LoginController(BaseController):
         if session.get("usuario_logado"): # verifica se o usuario esta em uma sessao
             return redirect(url_for("home"))  # entra na home se sim
         return render_template("login.html") # volta pro login
-        2
+        
 
     def entrar(self):
         usuario = request.form.get("usuario")

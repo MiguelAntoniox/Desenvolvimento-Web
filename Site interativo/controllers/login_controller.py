@@ -14,7 +14,16 @@ class Logincontroller(Basecontroller):
             ('/entrar', 'entrar', self.entrar, ['POST']),  
             ('/logout', 'logout', self.logout),
         ]
+        super().__init__(app)
 
+        """definindo o usuario e a senha corretos"""
+        self.usuario_correto = "admin"
+        self.senha_correta = "123"
+
+
+    def login(self):
+        if session.get("Usuario_logado"):
+            return redirect(url_for("home"))   
 
         
 

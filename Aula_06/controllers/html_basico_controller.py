@@ -15,6 +15,7 @@ class HTMLBasicoController(BaseController):
             ('/semantica', 'semantica', self.proteger_rota(self.semantica)),
             ('/semantica_avancada', 'semantica_avancada', self.proteger_rota(self.semantica_avancada)),
             ('/midia', 'midia', self.proteger_rota(self.midia)),
+            ('/seletores', 'seletores', self.proteger_rota(self.seletores)),
         ]
         super().__init__(app)
 
@@ -48,3 +49,6 @@ class HTMLBasicoController(BaseController):
     
     def midia(self):
         return render_template("midia.html")
+
+    def seletores(self):
+        return render_template("seletores.html")

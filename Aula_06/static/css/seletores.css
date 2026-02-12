@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+p {
+    color: #333;
+}
+
+
+.vermelho {
+    color: red;
+}
+
+.azul {
+    color: blue;
+}
+
+#destaque {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+div p {
+    font-style: italic; 
+}
+ul > li {
+    margin-bottom: 10px; 
+}
+
+nav a {
+    margin-right: 10px;
+    color: darkgreen;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: darkblue;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+ul li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+ul li:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+h2::before {
+    content: "E";
+    color: gold;
+}
+
+p::after {
+    content: "J";
+    color: green;
+}
+
+
+p {
+    color: black; 
+}
+
+.article-container p {
+    color: blue; 
+}
+
+#especial p {
+    color: red; 
+}

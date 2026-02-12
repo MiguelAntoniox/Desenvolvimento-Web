@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Avançado HTML5</title>
+
+>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formulario_extra.css') }}">
 </head>
 <body>
 
@@ -11,7 +17,6 @@
 
     <form action="/resultado_extra" method="POST">
 
-       
         <fieldset>
             <legend>Dados Pessoais</legend>
 
@@ -45,7 +50,7 @@
 
         <br>
 
-       
+    
         <fieldset>
             <legend>Preferências</legend>
 
@@ -66,7 +71,7 @@
 
         <br>
 
-       
+        
         <fieldset>
             <legend>Sexo</legend>
             <input type="radio" id="masc" name="sexo" value="Masculino" required>

@@ -3,11 +3,11 @@ pq ainda nao temos banco de dados"""
 
 
 from flask import render_template, session, request, redirect, url_for
-from controllers.base_controller import Basecontroller
+from controllers.base_controller import BaseController
 
 
 """definindo as rotas de login """
-class Logincontroller(Basecontroller):
+class Logincontroller(BaseController):
     def __init__(self,app):
         self.rotas[
             ('/login', 'login', self.login),

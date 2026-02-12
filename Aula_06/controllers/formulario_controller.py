@@ -1,17 +1,16 @@
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for, session
 from controllers.base_controller import BaseController
 
 class FormularioController(BaseController):
     def __init__(self, app):
         self.rotas = [
             ('/formulario', 'formulario', self.formulario),
-            ('/formulario', 'formulario', self.formulario),
             ('/resultado', 'resultado', self.resultado, ['POST']),
             ('/formulario_extra', 'formulario_extra', self.formulario_extra),
             ('/resultado_extra', 'resultado_extra', self.resultado_extra, ['POST']),
+          
         ]
         super().__init__(app)
-
 
     def formulario_extra(self):
         return render_template("formulario_extra.html")
@@ -33,7 +32,6 @@ class FormularioController(BaseController):
         if not nome or not email or not sexo or not hobbies:
             return "Por favor, preencha todos os campos obrigatórios!"
 
-   
         mensagem = request.form.get('mensagem', '')
         curso = request.form.get('curso', '')
         return render_template("resultado.html",
@@ -43,7 +41,7 @@ class FormularioController(BaseController):
                             curso=curso,
                             sexo=sexo,
                             hobbies=hobbies)
-    
+
     def resultado_extra(self):
         nome = request.form.get('nome')
         email = request.form.get('email')
@@ -56,11 +54,9 @@ class FormularioController(BaseController):
         cidade = request.form.get('cidade')
         sexo = request.form.get('sexo')
 
-       
         if not nome or not email or not sexo:
             return "Por favor, preencha os campos obrigatórios: nome, email e sexo."
 
-       
         return render_template("resultado_avancado.html",
                                nome=nome,
                                email=email,
@@ -72,3 +68,6 @@ class FormularioController(BaseController):
                                site=site,
                                cidade=cidade,
                                sexo=sexo)
+
+    
+ 
